@@ -372,10 +372,10 @@
 		<maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
 		<maven-surefire-plugin.vertsion>2.22.1</maven-surefire-plugin.vertsion>
 		<maven-nexus-staging-plugin.version>1.6.8</maven-nexus-staging-plugin.version>
-		<pdfbox.version>2.0.15</pdfbox.version>
-		<jempbox.version>1.8.16</jempbox.version>
-		<jbig2.version>3.0.2</jbig2.version>
-		<xmpbox.version>2.0.15</xmpbox.version>
+		<pdfbox.version>2.0.18</pdfbox.version>
+		<pdfbox-jempbox.version>1.8.16</pdfbox-jempbox.version>
+		<pdfbox-jbig2.version>3.0.3</pdfbox-jbig2.version>
+		<pdfbox-xmpbox.version>${pdfbox.version}</pdfbox-xmpbox.version>
 	</properties>
 	
 	<dependencyManagement>
@@ -402,19 +402,19 @@
 			<dependency>
 			    <groupId>org.apache.pdfbox</groupId>
 			    <artifactId>jempbox</artifactId>
-			    <version>${jempbox.version}</version>
+			    <version>${pdfbox-jempbox.version}</version>
 			</dependency>
 			<!-- https://mvnrepository.com/artifact/org.apache.pdfbox/jbig2-imageio -->
 			<dependency>
 			    <groupId>org.apache.pdfbox</groupId>
 			    <artifactId>jbig2-imageio</artifactId>
-			    <version>${jbig2.version}</version>
+			    <version>${pdfbox-jbig2.version}</version>
 			</dependency>
 			<!-- https://mvnrepository.com/artifact/org.apache.pdfbox/xmpbox -->
 			<dependency>
 			    <groupId>org.apache.pdfbox</groupId>
 			    <artifactId>xmpbox</artifactId>
-			    <version>${xmpbox.version}</version>
+			    <version>${pdfbox-xmpbox.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
