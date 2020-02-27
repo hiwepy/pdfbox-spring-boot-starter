@@ -365,6 +365,10 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<pdfbox.version>2.0.19</pdfbox.version>
+		<pdfbox-jempbox.version>1.8.16</pdfbox-jempbox.version>
+		<pdfbox-jbig2.version>3.0.3</pdfbox-jbig2.version>
+		<pdfbox-xmpbox.version>${pdfbox.version}</pdfbox-xmpbox.version>
 		<maven.version>3.0</maven.version>
 		<maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
 		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
@@ -372,10 +376,6 @@
 		<maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
 		<maven-surefire-plugin.vertsion>2.22.1</maven-surefire-plugin.vertsion>
 		<maven-nexus-staging-plugin.version>1.6.8</maven-nexus-staging-plugin.version>
-		<pdfbox.version>2.0.18</pdfbox.version>
-		<pdfbox-jempbox.version>1.8.16</pdfbox-jempbox.version>
-		<pdfbox-jbig2.version>3.0.3</pdfbox-jbig2.version>
-		<pdfbox-xmpbox.version>${pdfbox.version}</pdfbox-xmpbox.version>
 	</properties>
 	
 	<dependencyManagement>
@@ -398,6 +398,12 @@
 			    <artifactId>fontbox</artifactId>
 			    <version>${pdfbox.version}</version>
 			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.apache.pdfbox/preflight -->
+			<dependency>
+			    <groupId>org.apache.pdfbox</groupId>
+			    <artifactId>preflight</artifactId>
+			    <version>${pdfbox.version}</version>
+			</dependency>
 			<!-- https://mvnrepository.com/artifact/org.apache.pdfbox/jempbox -->
 			<dependency>
 			    <groupId>org.apache.pdfbox</groupId>
@@ -411,6 +417,11 @@
 			    <version>${pdfbox-jbig2.version}</version>
 			</dependency>
 			<!-- https://mvnrepository.com/artifact/org.apache.pdfbox/xmpbox -->
+			<!-- The Apache XmpBox library is an open source Java tool that implements Adobe's XMP(TM) specification. 
+				 It can be used to parse, validate and create xmp contents. 
+				 It is mainly used by subproject preflight of Apache PDFBox. 
+				 XmpBox is a subproject of Apache PDFBox. 
+			-->
 			<dependency>
 			    <groupId>org.apache.pdfbox</groupId>
 			    <artifactId>xmpbox</artifactId>
@@ -482,6 +493,11 @@
 			<groupId>org.apache.pdfbox</groupId>
 			<artifactId>pdfbox-tools</artifactId>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.pdfbox/preflight -->
+		<dependency>
+			<groupId>org.apache.pdfbox</groupId>
+			<artifactId>preflight</artifactId>
+		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.apache.pdfbox/xmpbox -->
 		<dependency>
 			<groupId>org.apache.pdfbox</groupId>
@@ -496,14 +512,6 @@
 			<groupId>org.apache.pdfbox</groupId>
 			<artifactId>jempbox</artifactId>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.apache.pdfbox/preflight -->
-		<dependency>
-			<groupId>org.apache.pdfbox</groupId>
-			<artifactId>preflight</artifactId>
-			<version>2.0.9</version>
-			<scope>provided</scope>
-		</dependency>
-
 
 	</dependencies>
 
